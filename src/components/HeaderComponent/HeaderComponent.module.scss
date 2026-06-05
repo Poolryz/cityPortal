@@ -1,0 +1,32 @@
+.header {
+    &__content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center
+    }
+}
+
+.nav {
+    &__list {
+        display: flex;
+        gap: 8px;
+    }
+
+    &__item {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #8C8C8C;
+        border-radius: 20px;
+        padding: 5px 10px;
+    }
+
+    &__link {
+
+        padding: 5px 10px;
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
