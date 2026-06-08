@@ -1,7 +1,12 @@
 import styles from "./styles.module.scss"
 import { Clock, MapPin } from "lucide-react";
+import { Event } from "@/types/event"
 
-function EventItemUi({ event }) {
+interface EventItemUiProps {
+    event: Event
+}
+
+function EventItemUi({ event }: EventItemUiProps) {
     const categories = event["categories"]
     return (
         <div className={styles.upcomingEvents__item}>

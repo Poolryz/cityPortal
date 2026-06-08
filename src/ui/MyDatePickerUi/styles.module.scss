@@ -1,0 +1,14 @@
+.rdpRoot {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    right: 0;
+    top: 100%;
+    padding: 10px 20px;
+    border-radius: 20px;
+    z-index: 800;
+
+    &_active {
+        display: block;
+    }
+}

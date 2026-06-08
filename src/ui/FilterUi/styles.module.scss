@@ -1,0 +1,50 @@
+.filter {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+
+    &__title {
+        color: #8C8C8C;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    &__item {
+        border: 1px solid #8C8C8C;
+        border-radius: 20px;
+
+    }
+
+    &__link {
+        padding: 8px 12px;
+        cursor: pointer;
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+    }
+}
+
+.calendarInput {
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+    border: 1 solid #8C8C8C;
+    padding: 5px 10px;
+    border: 1px solid #8C8C8C;
+    border-radius: 20px;
+    cursor: pointer;
+
+    &__title {
+        color: #8C8C8C;
+
+    }
+}

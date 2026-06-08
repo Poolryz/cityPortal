@@ -1,9 +1,12 @@
 import { Calendar, ChevronDown, Clock, MapPin, Search } from "lucide-react"
 import styles from "./styles.module.scss"
 import Link from "next/link"
-import MyDatePickerUi from "@/ui/MyDatePickerUi/MyDatePickerUi"
-import EventItemUi from "@/ui/MyDatePickerUi/EventItemUi/EventItemUi"
-import eventsList from "./events"
+// import MyDatePickerUi from "@/ui/MyDatePickerUi/MyDatePickerUi"
+import EventItemUi from "@/ui/EventItemUi/EventItemUi"
+import { eventsList } from "./events"
+import FilterUi from "@/ui/FilterUi/FilterUi"
+
+
 
 export const generateMetadata = () => {
     return {
@@ -22,39 +25,7 @@ export default function CalendarPage() {
                     <input className={styles.searchPanel__input} type="text" placeholder="Поиск мероприятий" name="" id="" />
                 </div>
             </div>
-            <div className={styles.filter}>
-                <div className={styles.filter__block}>
-                    <label className={styles.filter__title}>Фильтр</label>
-                    <ul className={styles.filter__list}>
-                        <li className={styles.filter__item}>
-                            <Link href="#" className={styles.filter__link}>Все</Link>
-                        </li>
-                        <li className={styles.filter__item}>
-                            <Link href="#" className={styles.filter__link}>Все</Link>
-                        </li>
-                        <li className={styles.filter__item}>
-                            <Link href="#" className={styles.filter__link}>Культура</Link>
-                        </li>
-                        <li className={styles.filter__item}>
-                            <Link href="#" className={styles.filter__link}>Спорт</Link>
-                        </li>
-                        <li className={styles.filter__item}>
-                            <Link href="#" className={styles.filter__link}>Фестивали</Link>
-                        </li>
-                        <li className={styles.filter__item}>
-                            <Link href="#" className={styles.filter__link}>Оброзование</Link>
-                        </li>
-                    </ul>
-                </div>
-                <div className={styles.calendarInput}>
-                    <Calendar />
-                    <div className={styles.calendarInput__title}>Июль 2025</div>
-                    <ChevronDown />
-                </div>
-
-
-                {/* <MyDatePicker /> */}
-            </div>
+            <FilterUi />
             <div className={styles.upcomingEvents}>
                 <h3 className={styles.upcomingEvents__title}>
                     Предстоящие события

@@ -1,7 +1,8 @@
-// eventsData.js
-export const eventsList = [
+import { Event } from "@/types/event"
+
+export const eventsList: Event[] = [
     {
-        id: 1,
+        id: "1",
         date: "14 июн",
         name: "Городской джазовый фестиваль",
         categories: ["Культура", "Фестиваль"],
@@ -9,7 +10,7 @@ export const eventsList = [
         location: "Центральный парк"
     },
     {
-        id: 2,
+        id: "2",
         date: "15 июн",
         name: "Выставка современного искусства",
         categories: ["Искусство", "Выставка"],
@@ -17,7 +18,7 @@ export const eventsList = [
         location: "Музей современного искусства"
     },
     {
-        id: 3,
+        id: "3",
         date: "16 июн",
         name: "Рок-концерт",
         categories: ["Музыка", "Концерт"],
@@ -25,7 +26,7 @@ export const eventsList = [
         location: "Стадион 'Арена'"
     },
     {
-        id: 4,
+        id: "4",
         date: "17 июн",
         name: "Кулинарный мастер-класс",
         categories: ["Еда", "Мастер-класс"],
@@ -33,7 +34,7 @@ export const eventsList = [
         location: "Кулинарная студия 'Вкус'"
     },
     {
-        id: 5,
+        id: "5",
         date: "18 июн",
         name: "Фестиваль уличной еды",
         categories: ["Еда", "Фестиваль"],
@@ -41,7 +42,7 @@ export const eventsList = [
         location: "Городская площадь"
     },
     {
-        id: 6,
+        id: "6",
         date: "19 июн",
         name: "Ночь в музее",
         categories: ["Культура", "Развлечение"],
@@ -49,7 +50,7 @@ export const eventsList = [
         location: "Исторический музей"
     },
     {
-        id: 7,
+        id: "7",
         date: "20 июн",
         name: "Театральная премьера",
         categories: ["Театр", "Премьера"],
@@ -57,7 +58,7 @@ export const eventsList = [
         location: "Драматический театр"
     },
     {
-        id: 8,
+        id: "8",
         date: "21 июн",
         name: "Киберспортивный турнир",
         categories: ["Спорт", "Турнир"],
@@ -65,4 +66,4 @@ export const eventsList = [
         location: "Кибер-арена"
     }
 ];
-export default eventsList
+
