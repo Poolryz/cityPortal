@@ -6,10 +6,10 @@ export default function HeaderComponent() {
     return (
         <header className="_container">
             <div className={styles.header__content}>
-                <div className="logotype flex gap-3.5 p-5">
+                <Link href={"/"} className="logotype flex gap-3.5 p-5">
                     <MapPin color="#389af5" size={40} className="logotype__icon w-auto h-auto to-blue-400" />
                     <span className="logotype__text text-4xl font-bold">LysvaLife</span>
-                </div>
+                </Link>
                 <nav className={styles.nav}>
                     <ul className={styles.nav__list}>
                         <li className={styles.nav__item}>
