@@ -32,19 +32,3 @@
         gap: 15px;
     }
 }
-
-.calendarInput {
-    display: flex;
-    flex-direction: row;
-    gap: 3px;
-    border: 1 solid #8C8C8C;
-    padding: 5px 10px;
-    border: 1px solid #8C8C8C;
-    border-radius: 20px;
-    cursor: pointer;
-
-    &__title {
-        color: #8C8C8C;
-
-    }
-}

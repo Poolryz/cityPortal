@@ -1,15 +1,12 @@
 'use client'
 
-import { Calendar, ChevronDown } from "lucide-react";
 import styles from "./styles.module.scss"
-import Link from "next/link";
 import { useState } from "react";
 import MyDatePickerUi from "../MyDatePickerUi/MyDatePickerUi";
 
 
 function FilterUi() {
     const [selectedCategory, setSelectedCategory] = useState<string>('all')
-    const [onDate, setOnDate] = useState<boolean>(false)
 
     return (
         <div className={styles.filter}>
@@ -33,14 +30,7 @@ function FilterUi() {
                     </li>
                 </ul>
             </div>
-            <div onClick={() => { return setOnDate(!onDate) }} className={styles.calendarInput}>
-                <Calendar />
-                <div className={styles.calendarInput__title}>Июль 2025</div>
-                <ChevronDown />
-            </div>
-
-
-            <MyDatePickerUi onDate={onDate} />
+            <MyDatePickerUi />
         </div>
     )
 }
