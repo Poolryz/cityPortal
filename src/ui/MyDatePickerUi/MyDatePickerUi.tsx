@@ -1,6 +1,6 @@
 "use client"
 import { DayPicker } from "@daypicker/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "@daypicker/react/style.css";
 import styles from "./styles.module.scss";
 import { Calendar, ChevronDown } from "lucide-react";
@@ -17,6 +17,10 @@ function MyDatePickerUi() {
         })
         return changeDate
     }
+    useEffect(() => {
+        setIsPanelOpen(false)
+
+    }, [selected])
 
     return (
         <>

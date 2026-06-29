@@ -3,35 +3,47 @@
 import styles from "./styles.module.scss"
 import { useState } from "react";
 import MyDatePickerUi from "../MyDatePickerUi/MyDatePickerUi";
-
+import useStore from "@/store/useStore";
 
 function FilterUi() {
     const [selectedCategory, setSelectedCategory] = useState<string>('all')
+    const categories = useStore((state) => state.categories)
+    const addCategories = useStore((state) => state.addCategories)
+
+    const categoriesObj = {
+        "all": "Все",
+        "culture": "Культура",
+        "sport": "Спорт",
+        "festival": "Фестиваль",
+        "education": "Образование"
+    }
+
+    function clickCategories(category: string) {
+        setSelectedCategory(category)
+        addCategories(category) // или addCategories([category])
+    }
+    console.log(categories);
 
     return (
         <div className={styles.filter}>
             <div className={styles.filter__block}>
                 <label className={styles.filter__title}>Фильтр</label>
                 <ul className={styles.filter__list}>
-                    <li className={styles.filter__item}>
-                        <button onClick={() => { setSelectedCategory('all') }} className={styles.filter__link}>Все</button>
-                    </li>
-                    <li className={styles.filter__item}>
-                        <button onClick={() => { setSelectedCategory('culture') }} className={styles.filter__link}>Культура</button>
-                    </li>
-                    <li className={styles.filter__item}>
-                        <button onClick={() => { setSelectedCategory('sport') }} className={styles.filter__link}>Спорт</button>
-                    </li>
-                    <li className={styles.filter__item}>
-                        <button onClick={() => { setSelectedCategory('festival') }} className={styles.filter__link}>Фестивали</button>
-                    </li>
-                    <li className={styles.filter__item}>
-                        <button onClick={() => { setSelectedCategory('education') }} className={styles.filter__link}>Оброзование</button>
-                    </li>
+                    {Object.entries(categoriesObj).map(([key, value]) => (
+                        <li className={styles.filter__item} key={key}>
+                            <button
+                                onClick={() => clickCategories(key)}
+                                className={`${styles.filter__link} ${selectedCategory === key ? styles.filter__link_active : ""}`}
+                            >
+                                {value}
+                            </button>
+                        </li>
+                    ))}
                 </ul>
             </div>
             <MyDatePickerUi />
         </div>
     )
 }
+
 export default FilterUi

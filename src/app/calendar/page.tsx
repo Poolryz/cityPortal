@@ -15,6 +15,8 @@ export const generateMetadata = () => {
     }
 }
 
+
+
 export default function CalendarPage() {
     return (
         <>
