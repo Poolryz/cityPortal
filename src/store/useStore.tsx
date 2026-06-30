@@ -12,24 +12,14 @@ const useStore = create((set) => ({
     // Состояние
     isLoading: false,
     events: [],
-    categories: [],
+    category: "",
 
     // Действия (actions)
     addEvents: (event: Event) => set((state: { events: any }) => ({
         events: [...state.events, event]
     })),
 
-    addCategories: (category) => set((state) => {
-        // Проверяем, есть ли уже такая категория
-        if (state.categories.includes(category)) {
-            return {
-                categories: state.categories.filter(cat => cat !== category)
-            }
-        }
-        return {
-            categories: [...state.categories, category]
-        }
-    }),
+    addCategory: (category: string) => set((state: { category: string }) => ({ category })),
 
     // Асинхронное действие
     //   fetchUser: async (id) => {

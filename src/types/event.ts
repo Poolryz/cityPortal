@@ -3,6 +3,6 @@ export interface Event {
     date: string
     name: string
     location: string
-    categories: string[]
+    category: string
     time: string
 }

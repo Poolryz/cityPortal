@@ -5,7 +5,7 @@ export const eventsList: Event[] = [
         id: "1",
         date: "14 июн",
         name: "Городской джазовый фестиваль",
-        categories: ["Фестивали"],
+        category: "festival",
         time: "18:00",
         location: "Центральный парк"
     },
@@ -13,7 +13,7 @@ export const eventsList: Event[] = [
         id: "2",
         date: "15 июн",
         name: "Выставка современного искусства",
-        categories: ["Культура"],
+        category: "culture",
         time: "11:00",
         location: "Музей современного искусства"
     },
@@ -21,7 +21,7 @@ export const eventsList: Event[] = [
         id: "3",
         date: "16 июн",
         name: "Рок-концерт",
-        categories: ["Фестивали"],
+        category: "festival",
         time: "20:00",
         location: "Стадион 'Арена'"
     },
@@ -29,7 +29,7 @@ export const eventsList: Event[] = [
         id: "4",
         date: "17 июн",
         name: "Кулинарный мастер-класс",
-        categories: ["Образование"],
+        category: "education",
         time: "15:30",
         location: "Кулинарная студия 'Вкус'"
     },
@@ -37,7 +37,7 @@ export const eventsList: Event[] = [
         id: "5",
         date: "18 июн",
         name: "Фестиваль уличной еды",
-        categories: ["Фестивали"],
+        category: "festival",
         time: "12:00",
         location: "Городская площадь"
     },
@@ -45,7 +45,7 @@ export const eventsList: Event[] = [
         id: "6",
         date: "19 июн",
         name: "Ночь в музее",
-        categories: ["Культура"],
+        category: "culture",
         time: "19:00",
         location: "Исторический музей"
     },
@@ -53,7 +53,7 @@ export const eventsList: Event[] = [
         id: "7",
         date: "20 июн",
         name: "Театральная премьера",
-        categories: ["Культура"],
+        category: "culture",
         time: "19:30",
         location: "Драматический театр"
     },
@@ -61,7 +61,7 @@ export const eventsList: Event[] = [
         id: "8",
         date: "21 июн",
         name: "Киберспортивный турнир",
-        categories: ["Спорт"],
+        category: "sport",
         time: "14:00",
         location: "Кибер-арена"
     }
