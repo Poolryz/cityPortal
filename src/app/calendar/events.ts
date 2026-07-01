@@ -3,7 +3,7 @@ import { Event } from "@/types/event"
 export const eventsList: Event[] = [
     {
         id: "1",
-        date: "14 июн",
+        date: "2026-06-14",
         name: "Городской джазовый фестиваль",
         category: "festival",
         time: "18:00",
@@ -11,7 +11,7 @@ export const eventsList: Event[] = [
     },
     {
         id: "2",
-        date: "15 июн",
+        date: "2026-06-15",
         name: "Выставка современного искусства",
         category: "culture",
         time: "11:00",
@@ -19,7 +19,7 @@ export const eventsList: Event[] = [
     },
     {
         id: "3",
-        date: "16 июн",
+        date: "2026-06-16",
         name: "Рок-концерт",
         category: "festival",
         time: "20:00",
@@ -27,7 +27,7 @@ export const eventsList: Event[] = [
     },
     {
         id: "4",
-        date: "17 июн",
+        date: "2026-06-17",
         name: "Кулинарный мастер-класс",
         category: "education",
         time: "15:30",
@@ -35,7 +35,7 @@ export const eventsList: Event[] = [
     },
     {
         id: "5",
-        date: "18 июн",
+        date: "2026-06-17",
         name: "Фестиваль уличной еды",
         category: "festival",
         time: "12:00",
@@ -43,7 +43,7 @@ export const eventsList: Event[] = [
     },
     {
         id: "6",
-        date: "19 июн",
+        date: "2026-06-19",
         name: "Ночь в музее",
         category: "culture",
         time: "19:00",
@@ -51,7 +51,7 @@ export const eventsList: Event[] = [
     },
     {
         id: "7",
-        date: "20 июн",
+        date: "2026-06-20",
         name: "Театральная премьера",
         category: "culture",
         time: "19:30",
@@ -59,7 +59,7 @@ export const eventsList: Event[] = [
     },
     {
         id: "8",
-        date: "21 июн",
+        date: "2026-07-21",
         name: "Киберспортивный турнир",
         category: "sport",
         time: "14:00",

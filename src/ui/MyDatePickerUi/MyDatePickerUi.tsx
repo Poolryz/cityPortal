@@ -5,12 +5,17 @@ import "@daypicker/react/style.css";
 import styles from "./styles.module.scss";
 import { Calendar, ChevronDown } from "lucide-react";
 import { ru } from "@daypicker/react/locale";
+import useStore from "@/store/useStore";
 
 function MyDatePickerUi() {
     const [isPanelOpen, setIsPanelOpen] = useState<boolean>(false)
-    const [selected, setSelected] = useState<Date>();
+    const [selected, setSelected] = useState<Date | undefined>()
     const [date, setDate] = useState(new Date());
-    function formatDateChange(date: Date) {
+
+    const addDateStore = useStore((state: any) => state.addDate);
+    const dateStore = useStore((state: any) => state.date);
+    function formatDateChange(date: Date | undefined) {
+        if (!date) return ""
         const changeDate = date.toLocaleDateString('ru-RU', {
             day: 'numeric',
             month: 'long'
@@ -19,14 +24,15 @@ function MyDatePickerUi() {
     }
     useEffect(() => {
         setIsPanelOpen(false)
-
+        addDateStore(selected)
     }, [selected])
+
 
     return (
         <>
             <div onClick={() => { return setIsPanelOpen(!isPanelOpen) }} className={styles.calendarInput}>
                 <Calendar />
-                <div className={styles.calendarInput__title}>{selected ? formatDateChange(selected) : formatDateChange(date)}</div>
+                <div className={styles.calendarInput__title}>{dateStore ? formatDateChange(selected) : "Не выбрана дата"}</div>
                 <ChevronDown />
             </div>
             < DayPicker
@@ -36,7 +42,7 @@ function MyDatePickerUi() {
                 selected={selected}
                 onSelect={setSelected}
                 footer={
-                    `Дата: ${formatDateChange(selected || date)}`
+                    `Дата: ${dateStore ? formatDateChange(selected || date) : "Не выбрана дата"}`
                 }
             />
         </>

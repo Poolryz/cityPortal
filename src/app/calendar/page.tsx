@@ -1,10 +1,11 @@
-import { Calendar, ChevronDown, Clock, MapPin, Search } from "lucide-react"
+
 import styles from "./styles.module.scss"
 import Link from "next/link"
 // import MyDatePickerUi from "@/ui/MyDatePickerUi/MyDatePickerUi"
 import EventItemUi from "@/ui/EventItemUi/EventItemUi"
 import { eventsList } from "./events"
 import FilterUi from "@/ui/FilterUi/FilterUi"
+import SearchPanelUi from "@/ui/SearchPanelUi/SearchPanelUi"
 
 
 
@@ -22,10 +23,7 @@ export default function CalendarPage() {
         <>
             <div className={styles.titlePanel}>
                 <h1 className={styles.titlePanel__title}>Календарь мероприятий</h1>
-                <div className={styles.searchPanel}>
-                    <Search size={16} />
-                    <input className={styles.searchPanel__input} type="text" placeholder="Поиск мероприятий" name="" id="" />
-                </div>
+                <SearchPanelUi />
             </div>
             <FilterUi />
             <div className={styles.upcomingEvents}>

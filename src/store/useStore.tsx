@@ -12,7 +12,9 @@ const useStore = create((set) => ({
     // Состояние
     isLoading: false,
     events: [],
-    category: "",
+    category: "all",
+    date: "",
+    search: "",
 
     // Действия (actions)
     addEvents: (event: Event) => set((state: { events: any }) => ({
@@ -21,6 +23,8 @@ const useStore = create((set) => ({
 
     addCategory: (category: string) => set((state: { category: string }) => ({ category })),
 
+    addDate: (date: string) => set((state: { date: string }) => ({ date })),
+    addSearch: (search: string) => set((state: { search: string }) => ({ search })),
     // Асинхронное действие
     //   fetchUser: async (id) => {
     //     set({ isLoading: true })

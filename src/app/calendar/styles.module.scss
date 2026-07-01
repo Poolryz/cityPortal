@@ -13,26 +13,6 @@
     &__search {}
 }
 
-.searchPanel {
-    padding: 5px 10px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-    min-width: 300px;
-    max-width: 301px;
-    border: 1px solid #8C8C8C;
-    border-radius: 20px;
-
-
-    &__input {
-        padding: 5px 10px;
-        width: 100%;
-        border: none;
-        outline: none;
-    }
-}
-
 .upcomingEvents {
     &__title {
         font-size: 1.5rem;

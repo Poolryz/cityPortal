@@ -7,7 +7,7 @@ import useStore from "@/store/useStore";
 
 function FilterUi() {
     const [selectedCategory, setSelectedCategory] = useState<string>('all')
-    const addCategory = useStore((state) => state.addCategory)
+    const addCategory = useStore((state: any) => state.addCategory)
 
     useEffect(() => {
         addCategory(selectedCategory)
@@ -20,7 +20,7 @@ function FilterUi() {
         "festival": "Фестиваль",
         "education": "Образование"
     }
-    console.log(selectedCategory);
+
 
 
 
