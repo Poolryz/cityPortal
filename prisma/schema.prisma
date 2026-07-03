@@ -18,3 +18,12 @@ model User {
   name      String?
   createdAt DateTime @default(now())
 }
+
+model Event {
+  id        Int      @id @default(autoincrement())
+  name      String
+  date      String
+  location  String
+  category  String
+  time      String
+}
