@@ -1,13 +1,8 @@
-
 import styles from "./styles.module.scss"
-import Link from "next/link"
 // import MyDatePickerUi from "@/ui/MyDatePickerUi/MyDatePickerUi"
-import EventItemUi from "@/ui/EventItemUi/EventItemUi"
-import { eventsList } from "./events"
 import FilterUi from "@/ui/FilterUi/FilterUi"
 import SearchPanelUi from "@/ui/SearchPanelUi/SearchPanelUi"
-
-
+import EventsListUi from "@/ui/EventsListUi/EventsListUi"
 
 export const generateMetadata = () => {
     return {
@@ -30,14 +25,7 @@ export default function CalendarPage() {
                 <h3 className={styles.upcomingEvents__title}>
                     Предстоящие события
                 </h3>
-                <div className={styles.upcomingEvents__grid}>
-                    {eventsList.map((event) => {
-                        return (
-                            <EventItemUi key={event.id} event={event} />
-                        )
-                    })}
-
-                </div>
+                <EventsListUi />
             </div>
         </>
     )
