@@ -1,5 +1,4 @@
 import '@/app/globals.scss'
-import HeaderComponent from '@/components/HeaderComponent/HeaderComponent'
 import { Roboto } from 'next/font/google'
 
 const roboto = Roboto({

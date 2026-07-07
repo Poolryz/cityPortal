@@ -1,6 +1,4 @@
 "use client"
-import prisma from "@/lib/prisma";
-import Link from "next/link";
 import { useState } from "react";
 import { createEvent, getEvents } from "../actions/events";
 
