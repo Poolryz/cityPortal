@@ -1,12 +1,12 @@
-import { auth } from "@/auth";
-import { signOut } from "@/auth";
-async function GetEventPage() {
+import { auth, signOut } from "@/auth";
+import { redirect } from "next/navigation";
+
+async function ProfilePage() {
     const session = await auth();
 
     if (!session) {
-        return <p>Пожалуйста, войдите в систему</p>;
+        return redirect("/signIn");
     }
-
     return (
         <div>
             <h1>Добро пожаловать, {session.user?.name || session.user?.email}!</h1>
@@ -15,12 +15,13 @@ async function GetEventPage() {
             <form
                 action={async () => {
                     "use server";
-                    await signOut({ redirectTo: "/signin" });
+                    await signOut({ redirectTo: "/signIn" });
                 }}
             >
                 <button type="submit">Выйти</button>
             </form>
         </div>
-    );
+    )
 }
-export default GetEventPage
+export default ProfilePage;
+
