@@ -1,11 +1,8 @@
 import EventItemUi from "@/ui/EventItemUi/EventItemUi"
 import styles from "./styles.module.scss"
-import { eventsList } from "@/app/events"
-import prisma from "@/lib/prisma"
+import { getEvents } from "@/app/actions/events"
 async function EventsListUi() {
-    const eventsData = await prisma.event.findMany()
-    console.dir(eventsData)
-
+    const eventsData = await getEvents()
     return (
         <>
             <div className={styles.upcomingEvents__grid}>
