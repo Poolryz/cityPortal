@@ -1,6 +1,6 @@
 "use client"
 import { useState } from "react";
-import { createEvent, getEvents } from "../actions/events";
+import { createEvent, getEvents } from "@/app/actions/events";
 
 function AdminPage() {
     const [events, setEvents] = useState<any[]>([]);

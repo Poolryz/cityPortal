@@ -5,7 +5,7 @@ async function ProfilePage() {
     const session = await auth();
 
     if (!session) {
-        return redirect("/signIn");
+        return redirect("/signin");
     }
     return (
         <div>
@@ -15,7 +15,7 @@ async function ProfilePage() {
             <form
                 action={async () => {
                     "use server";
-                    await signOut({ redirectTo: "/signIn" });
+                    await signOut({ redirectTo: "/signin" });
                 }}
             >
                 <button type="submit">Выйти</button>

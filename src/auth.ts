@@ -56,7 +56,7 @@ export const { auth, handlers, signIn, signOut } = NextAuth({
     ],
     // Настройка страниц
     pages: {
-        signIn: "/signIn", // кастомная страница входа
+        signIn: "/signin", // кастомная страница входа
     },
     callbacks: {
         // Добавляем id и email в JWT

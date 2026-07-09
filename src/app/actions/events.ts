@@ -1,4 +1,3 @@
-
 'use server'
 
 import prisma from "@/lib/prisma";
@@ -45,5 +44,20 @@ export async function createEvent(data: {
     } catch (error) {
         console.error('Error in createEvent:', error);
         throw new Error('Failed to create event');
+    }
+}
+
+export async function deleteEvent(id: number) {
+    try {
+        if (!prisma) {
+            throw new Error('Prisma client not initialized');
+        }
+
+        await prisma.event.delete({
+            where: { id },
+        });
+    } catch (error) {
+        console.error('Error in deleteEvent:', error);
+        throw new Error('Failed to delete event');
     }
 }
