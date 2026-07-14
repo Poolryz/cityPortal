@@ -11,7 +11,7 @@ function EventHeroComponent() {
                 </div>
                 <ul className={styles["event-hero__list"]}>
                     <li className={styles["event-hero__item"]}>
-                        <div className={styles["event-hero__date"]}><div className={styles["event-hero__number"]}>24</div><div className={styles["event-hero__month"]}></div> мая</div>
+                        <div className={styles["event-hero__date"]}><div className={styles["event-hero__number"]}>24</div><div className={styles["event-hero__month"]}>мая</div> </div>
                         <div className={styles["event-hero__info"]}>
                             <div className={styles["event-hero__name"]}>День славянской письменности и культуры</div>
                             <div className={styles["event-hero__location"]}>
@@ -23,7 +23,7 @@ function EventHeroComponent() {
                         </div>
                     </li>
                     <li className={styles["event-hero__item"]}>
-                        <div className={styles["event-hero__date"]}><div className={styles["event-hero__number"]}>24</div><div className={styles["event-hero__month"]}></div> мая</div>
+                        <div className={styles["event-hero__date"]}><div className={styles["event-hero__number"]}>24</div><div className={styles["event-hero__month"]}>мая</div> </div>
                         <div className={styles["event-hero__info"]}>
                             <div className={styles["event-hero__name"]}>День славянской письменности и культуры</div>
                             <div className={styles["event-hero__location"]}>
@@ -35,7 +35,7 @@ function EventHeroComponent() {
                         </div>
                     </li>
                     <li className={styles["event-hero__item"]}>
-                        <div className={styles["event-hero__date"]}><div className={styles["event-hero__number"]}>24</div><div className={styles["event-hero__month"]}></div> мая</div>
+                        <div className={styles["event-hero__date"]}><div className={styles["event-hero__number"]}>24</div><div className={styles["event-hero__month"]}>мая</div> </div>
                         <div className={styles["event-hero__info"]}>
                             <div className={styles["event-hero__name"]}>День славянской письменности и культуры</div>
                             <div className={styles["event-hero__location"]}>
@@ -47,7 +47,7 @@ function EventHeroComponent() {
                         </div>
                     </li>
                     <li className={styles["event-hero__item"]}>
-                        <div className={styles["event-hero__date"]}><div className={styles["event-hero__number"]}>24</div><div className={styles["event-hero__month"]}></div> мая</div>
+                        <div className={styles["event-hero__date"]}><div className={styles["event-hero__number"]}>24</div><div className={styles["event-hero__month"]}>мая</div> </div>
                         <div className={styles["event-hero__info"]}>
                             <div className={styles["event-hero__name"]}>День славянской письменности и культуры</div>
                             <div className={styles["event-hero__location"]}>
@@ -59,7 +59,7 @@ function EventHeroComponent() {
                         </div>
                     </li>
                     <li className={styles["event-hero__item"]}>
-                        <div className={styles["event-hero__date"]}><div className={styles["event-hero__number"]}>24</div><div className={styles["event-hero__month"]}></div> мая</div>
+                        <div className={styles["event-hero__date"]}><div className={styles["event-hero__number"]}>24</div><div className={styles["event-hero__month"]}>мая</div> </div>
                         <div className={styles["event-hero__info"]}>
                             <div className={styles["event-hero__name"]}>День славянской письменности и культуры</div>
                             <div className={styles["event-hero__location"]}>

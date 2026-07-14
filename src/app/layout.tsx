@@ -1,18 +1,23 @@
 import '@/app/globals.scss'
-import { Roboto } from 'next/font/google'
+import { Golos_Text } from 'next/font/google'
+import type { Viewport } from 'next'
 
-const roboto = Roboto({
+export const viewport: Viewport = {
+}
+
+const golosText = Golos_Text({
   weight: '400',
-  subsets: ['latin'],
 })
 
 
 export const metadata = {
+
 }
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={roboto.className}>
+    <html lang="en" className={golosText.className}>
+      <meta name="viewport" content=""></meta>
       <body>
         {children}
       </body>

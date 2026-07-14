@@ -6,22 +6,26 @@
 
     &__span {
         font-size: 18px;
-
+        color: #7a7f86;
     }
 
     &__title-h1 {
         font-size: 68px;
         font-weight: 600;
+        line-height: 1;
     }
 
     &__title {
         font-size: 22px;
-        font-weight: 600;
+        font-weight: 500;
+        padding: 10px 0;
     }
 
     &__text {
-        font-size: 16px;
+        font-size: 14px;
         max-width: 450px;
+        color: #7a7f86;
+        margin: 0 0 20px 0;
     }
 
     &__link {
@@ -29,7 +33,9 @@
     }
 
     &__button {
+        font-size: 14px;
         color: #ffffff;
+        font-weight: 600;
         padding: 12px 20px;
         display: flex;
         flex-direction: row;
