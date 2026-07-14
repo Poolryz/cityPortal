@@ -3,7 +3,8 @@ import HeroTextComponent from "@/components/HeroTextComponent/HeroTextComponent"
 import InfoHeroComponent from "@/components/InfoHeroComponent/InfoHeroComponent";
 import EventHeroComponent from "@/components/EventHeroComponent/EventHeroComponent";
 import PagesItemComponent from "@/components/PagesItemComponent/PagesItemComponent";
-import { CalendarDays } from "lucide-react";
+import { CalendarDays, Flag } from "lucide-react";
+import AboutCityComponent from "@/components/AboutCityComponent/AboutCityComponent";
 
 export const generateMetadata = () => {
 	return {
@@ -41,6 +42,7 @@ export default function HomePage() {
 					<PagesItemComponent icon={<CalendarDays size={30} />} name={"Транспорт"} text={"Расписание движения общественного транспорта и полезная информация"} active={false} />
 				</ul>
 			</div>
+			<AboutCityComponent />
 		</>
 	)
 }
