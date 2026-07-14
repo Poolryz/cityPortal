@@ -1,0 +1,54 @@
+.item {
+    max-width: 200px;
+    padding: 10px;
+    border: 1px solid #bfc0c250;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+
+    &__icon {
+        color: #1669e3;
+        background-color: #edf4fe;
+        padding: 10px;
+        border-radius: 50%;
+
+
+        &_active {
+            color: #ffffff;
+            background-color: #1669e3;
+
+        }
+    }
+
+    &__name {
+        font-weight: 600;
+        font-size: 18px;
+        word-break: break-all;
+    }
+
+    &__text {
+        color: #737985;
+        font-size: 14px;
+        flex: 100%;
+    }
+
+    &__button {
+        color: #73767b;
+        background-color: #eeeef0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 5px;
+        padding: 5px 10px;
+        border-radius: 8px;
+        cursor: not-allowed;
+
+        &_active {
+            cursor: pointer;
+            color: #ffffff;
+            background-color: #1669e3;
+        }
+    }
+}

@@ -16,3 +16,14 @@
         padding: 0 10px;
     }
 }
+
+.pages {
+    &__list {
+        margin: 20px 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
