@@ -1,4 +1,4 @@
-import { Flag } from "lucide-react"
+import { Drama, Factory, Flag, GraduationCap } from "lucide-react"
 import styles from "./styles.module.scss"
 
 function AboutCityComponent() {
@@ -23,19 +23,19 @@ function AboutCityComponent() {
                         <div className={styles['about-city__info']}>Истории города</div>
                     </li>
                     <li className={styles['about-city__item']}>
-                        <Flag color="#1669e3" size={32} />
+                        <Factory color="#1669e3" size={32} />
                         <div className={styles['about-city__number']}>239</div>
                         <div className={styles['about-city__label']}>лет</div>
                         <div className={styles['about-city__info']}>Истории города</div>
                     </li>
                     <li className={styles['about-city__item']}>
-                        <Flag color="#1669e3" size={32} />
+                        <GraduationCap color="#1669e3" size={32} />
                         <div className={styles['about-city__number']}>239</div>
                         <div className={styles['about-city__label']}>лет</div>
                         <div className={styles['about-city__info']}>Истории города</div>
                     </li>
                     <li className={styles['about-city__item']}>
-                        <Flag color="#1669e3" size={32} />
+                        <Drama color="#1669e3" size={32} />
                         <div className={styles['about-city__number']}>239</div>
                         <div className={styles['about-city__label']}>лет</div>
                         <div className={styles['about-city__info']}>Истории города</div>

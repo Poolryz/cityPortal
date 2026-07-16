@@ -1,7 +1,11 @@
 import { Calendar, Clock, MapPinIcon, MoveRight } from "lucide-react";
 import styles from "./styles.module.scss";
 import Link from "next/link";
-function EventHeroComponent() {
+import { getEvents } from "@/app/actions/events";
+async function EventHeroComponent() {
+    const events = await getEvents()
+    console.log(events);
+
     return (
         <div className={styles["event-hero"]}>
             <div className={styles["event-hero__body"]}>
@@ -10,6 +14,7 @@ function EventHeroComponent() {
                     <Link href={"/calendar"} className={styles["event-hero__link"]}>Все события <MoveRight /></Link>
                 </div>
                 <ul className={styles["event-hero__list"]}>
+
                     <li className={styles["event-hero__item"]}>
                         <div className={styles["event-hero__date"]}><div className={styles["event-hero__number"]}>24</div><div className={styles["event-hero__month"]}>мая</div> </div>
                         <div className={styles["event-hero__info"]}>
@@ -71,7 +76,7 @@ function EventHeroComponent() {
                         </div>
                     </li>
                 </ul>
-                <button className={styles["event-hero__button"]}><Calendar />Смотреть календарь событий</button>
+                <Link href={"/calendar"} className={styles["event-hero__button"]}><Calendar />Смотреть календарь событий</Link>
             </div>
         </div>
     )
