@@ -4,7 +4,6 @@ import Link from "next/link";
 import { getEvents } from "@/app/actions/events";
 async function EventHeroComponent() {
     const events = await getEvents()
-    console.log(events);
 
     return (
         <div className={styles["event-hero"]}>

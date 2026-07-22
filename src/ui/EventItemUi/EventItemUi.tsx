@@ -9,9 +9,13 @@ interface EventItemUiProps {
 }
 
 function EventItemUi({ event }: EventItemUiProps) {
+    const dataActual = new Date().toISOString().split('T')[0]
+    const dateActualMs = new Date(dataActual).getTime()
     const categoryStore = useStore((state: any) => state.category)
     const dateStore = useStore((state: any) => state.date);
     const searchStore = useStore((state: any) => state.search)
+    const dateStoreDate = new Date(event.date)
+    const dateStoreDateMs = dateStoreDate.getTime()
     const category = event["category"]
     const categoriesObj: any = {
         "all": "Все",
@@ -49,6 +53,11 @@ function EventItemUi({ event }: EventItemUiProps) {
         const day = String(date.getDate()).padStart(2, '0');
 
         return `${year}-${month}-${day}`;
+    }
+
+    if (dateStoreDateMs < dateActualMs) {
+        return;
+
     }
 
     if (searchStore && !event.name.toLowerCase().includes(searchStore.toLowerCase())) {

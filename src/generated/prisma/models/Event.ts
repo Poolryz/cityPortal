@@ -191,7 +191,7 @@ export type EventGroupByOutputType = {
   date: string
   location: string
   category: string
-  time: string
+  time: string | null
   _count: EventCountAggregateOutputType | null
   _avg: EventAvgAggregateOutputType | null
   _sum: EventSumAggregateOutputType | null
@@ -223,7 +223,7 @@ export type EventWhereInput = {
   date?: Prisma.StringFilter<"Event"> | string
   location?: Prisma.StringFilter<"Event"> | string
   category?: Prisma.StringFilter<"Event"> | string
-  time?: Prisma.StringFilter<"Event"> | string
+  time?: Prisma.StringNullableFilter<"Event"> | string | null
 }
 
 export type EventOrderByWithRelationInput = {
@@ -232,7 +232,7 @@ export type EventOrderByWithRelationInput = {
   date?: Prisma.SortOrder
   location?: Prisma.SortOrder
   category?: Prisma.SortOrder
-  time?: Prisma.SortOrder
+  time?: Prisma.SortOrderInput | Prisma.SortOrder
 }
 
 export type EventWhereUniqueInput = Prisma.AtLeast<{
@@ -244,7 +244,7 @@ export type EventWhereUniqueInput = Prisma.AtLeast<{
   date?: Prisma.StringFilter<"Event"> | string
   location?: Prisma.StringFilter<"Event"> | string
   category?: Prisma.StringFilter<"Event"> | string
-  time?: Prisma.StringFilter<"Event"> | string
+  time?: Prisma.StringNullableFilter<"Event"> | string | null
 }, "id">
 
 export type EventOrderByWithAggregationInput = {
@@ -253,7 +253,7 @@ export type EventOrderByWithAggregationInput = {
   date?: Prisma.SortOrder
   location?: Prisma.SortOrder
   category?: Prisma.SortOrder
-  time?: Prisma.SortOrder
+  time?: Prisma.SortOrderInput | Prisma.SortOrder
   _count?: Prisma.EventCountOrderByAggregateInput
   _avg?: Prisma.EventAvgOrderByAggregateInput
   _max?: Prisma.EventMaxOrderByAggregateInput
@@ -270,7 +270,7 @@ export type EventScalarWhereWithAggregatesInput = {
   date?: Prisma.StringWithAggregatesFilter<"Event"> | string
   location?: Prisma.StringWithAggregatesFilter<"Event"> | string
   category?: Prisma.StringWithAggregatesFilter<"Event"> | string
-  time?: Prisma.StringWithAggregatesFilter<"Event"> | string
+  time?: Prisma.StringNullableWithAggregatesFilter<"Event"> | string | null
 }
 
 export type EventCreateInput = {
@@ -278,7 +278,7 @@ export type EventCreateInput = {
   date: string
   location: string
   category: string
-  time: string
+  time?: string | null
 }
 
 export type EventUncheckedCreateInput = {
@@ -287,7 +287,7 @@ export type EventUncheckedCreateInput = {
   date: string
   location: string
   category: string
-  time: string
+  time?: string | null
 }
 
 export type EventUpdateInput = {
@@ -295,7 +295,7 @@ export type EventUpdateInput = {
   date?: Prisma.StringFieldUpdateOperationsInput | string
   location?: Prisma.StringFieldUpdateOperationsInput | string
   category?: Prisma.StringFieldUpdateOperationsInput | string
-  time?: Prisma.StringFieldUpdateOperationsInput | string
+  time?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
 }
 
 export type EventUncheckedUpdateInput = {
@@ -304,7 +304,7 @@ export type EventUncheckedUpdateInput = {
   date?: Prisma.StringFieldUpdateOperationsInput | string
   location?: Prisma.StringFieldUpdateOperationsInput | string
   category?: Prisma.StringFieldUpdateOperationsInput | string
-  time?: Prisma.StringFieldUpdateOperationsInput | string
+  time?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
 }
 
 export type EventCreateManyInput = {
@@ -313,7 +313,7 @@ export type EventCreateManyInput = {
   date: string
   location: string
   category: string
-  time: string
+  time?: string | null
 }
 
 export type EventUpdateManyMutationInput = {
@@ -321,7 +321,7 @@ export type EventUpdateManyMutationInput = {
   date?: Prisma.StringFieldUpdateOperationsInput | string
   location?: Prisma.StringFieldUpdateOperationsInput | string
   category?: Prisma.StringFieldUpdateOperationsInput | string
-  time?: Prisma.StringFieldUpdateOperationsInput | string
+  time?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
 }
 
 export type EventUncheckedUpdateManyInput = {
@@ -330,7 +330,7 @@ export type EventUncheckedUpdateManyInput = {
   date?: Prisma.StringFieldUpdateOperationsInput | string
   location?: Prisma.StringFieldUpdateOperationsInput | string
   category?: Prisma.StringFieldUpdateOperationsInput | string
-  time?: Prisma.StringFieldUpdateOperationsInput | string
+  time?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
 }
 
 export type EventCountOrderByAggregateInput = {
@@ -370,6 +370,10 @@ export type EventSumOrderByAggregateInput = {
 
 export type StringFieldUpdateOperationsInput = {
   set?: string
+}
+
+export type NullableStringFieldUpdateOperationsInput = {
+  set?: string | null
 }
 
 export type IntFieldUpdateOperationsInput = {
@@ -429,7 +433,7 @@ export type $EventPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs 
     date: string
     location: string
     category: string
-    time: string
+    time: string | null
   }, ExtArgs["result"]["event"]>
   composites: {}
 }
