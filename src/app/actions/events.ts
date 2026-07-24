@@ -73,3 +73,53 @@ export async function deleteEvent(id: number) {
         throw new Error('Failed to delete event');
     }
 }
+export async function getEventById(id: string) {
+    try {
+        if (!prisma) {
+            throw new Error('Prisma client not initialized');
+        }
+
+        return await prisma.event.findUnique({
+            where: { id: parseInt(id) },
+        });
+    } catch (error) {
+        console.error('Error in getEventById:', error);
+        throw new Error('Failed to fetch event');
+    }
+}
+export async function updateEvent(id: number, data: {
+    name: string;
+    date: string;
+    location: string;
+    category: string;
+    time: string;
+}) {
+    try {
+        if (!prisma) {
+            throw new Error('Prisma client not initialized');
+        }
+        if (!id || isNaN(Number(id))) {
+            console.error('❌ Invalid ID:', id);
+            throw new Error('Invalid event ID');
+        }
+
+        const eventDate = new Date(data.date)
+
+        const updateData = {
+            name: data.name.trim().slice(0, 255),
+            date: eventDate.toISOString().split('T')[0],
+            location: data.location?.trim()?.slice(0, 255) || '',
+            category: data.category?.trim()?.slice(0, 100) || '',
+            time: data.time?.trim()?.slice(0, 20) || ''
+        };
+        const result = await prisma.event.update({
+            where: { id: Number(id) },
+            data: updateData
+        });
+
+        return result;
+    } catch (error) {
+        console.error('Error in updateEvent:', error);
+        throw new Error('Failed to update event');
+    }
+}
