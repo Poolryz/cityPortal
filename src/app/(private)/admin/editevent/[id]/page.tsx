@@ -1,6 +1,14 @@
 import { getEventById, updateEvent } from "@/app/actions/events";
+import { auth } from "@/auth";
+import { redirect } from "next/navigation";
 
 async function editEventId({ params }: { id: string }) {
+    const session = await auth();
+
+    if (!session) {
+        return redirect("/signin");
+    }
+
     const { id } = await params
     const event = await getEventById(id)
 
