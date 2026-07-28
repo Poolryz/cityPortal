@@ -1,19 +1,10 @@
+import checkAuth from "@/app/actions/auth";
 import { getEvents } from "@/app/actions/events";
 import Link from "next/link";
-import { auth } from "@/auth";
-import { redirect } from "next/navigation";
 
 async function editEvent() {
-
-    const session = await auth();
-
-    if (!session) {
-        return redirect("/signin");
-    }
-
+    await checkAuth()
     const events = await getEvents()
-
-
     return (
         <div className="flex flex-col gap-2">
             {events.map((item) => {

@@ -1,13 +1,8 @@
 import Link from "next/link";
-import { auth } from "@/auth";
-import { redirect } from "next/navigation";
+import checkAuth from "@/app/actions/auth";
 
 async function AdminPage() {
-    const session = await auth();
-
-    if (!session) {
-        return redirect("/signin");
-    }
+    await checkAuth()
 
     return (
         <nav className="flex flex-col gap-2">

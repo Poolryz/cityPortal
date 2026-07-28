@@ -1,12 +1,9 @@
+import checkAuth from "@/app/actions/auth";
 import { auth, signOut } from "@/auth";
-import { redirect } from "next/navigation";
 
 async function ProfilePage() {
+    await checkAuth()
     const session = await auth();
-
-    if (!session) {
-        return redirect("/signin");
-    }
     return (
         <div>
             <h1>Добро пожаловать, {session.user?.name || session.user?.email}!</h1>

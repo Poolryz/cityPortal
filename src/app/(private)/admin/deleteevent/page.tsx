@@ -1,15 +1,10 @@
 import { getEvents } from "@/app/actions/events";
 import ButtonDeletteEventComponent from "@/components/ButtonDeletteEventComponent/ButtonDeletteEventComponent";
-import { auth } from "@/auth";
-import { redirect } from "next/navigation";
+import checkAuth from "@/app/actions/auth";
 
 async function DeleteEventPage() {
 
-    const session = await auth();
-
-    if (!session) {
-        return redirect("/signin");
-    }
+    await checkAuth()
 
     const events = await getEvents()
     return (
