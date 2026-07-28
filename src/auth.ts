@@ -54,6 +54,7 @@ export const { auth, handlers, signIn, signOut } = NextAuth({
             },
         }),
     ],
+    trustHost: true,
     // Настройка страниц
     pages: {
         signIn: "/signin", // кастомная страница входа
