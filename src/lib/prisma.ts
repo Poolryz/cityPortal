@@ -22,8 +22,7 @@ pool.on('error', (err) => {
 });
 
 const adapter = new PrismaPg({
-    connectionString: process.env.DATABASE_URL,
-    pool, // 👈 Передаём настроенный пул
+    connectionString: process.env.DATABASE_URL // 👈 Передаём настроенный пул
 });
 
 const prisma = globalForPrisma.prisma || new PrismaClient({

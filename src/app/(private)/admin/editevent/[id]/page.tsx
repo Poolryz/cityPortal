@@ -1,7 +1,7 @@
 import checkAuth from "@/app/actions/auth";
 import { getEventById, updateEvent } from "@/app/actions/events";
 
-async function editEventId({ params }: { id: string }) {
+async function editEventId({ params }: any) {
     await checkAuth()
 
     const { id } = await params

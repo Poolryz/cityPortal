@@ -1,6 +1,7 @@
 import '@/app/globals.scss'
 import { Golos_Text } from 'next/font/google'
 import type { Viewport } from 'next'
+import { ReactNode } from 'react'
 
 export const viewport: Viewport = {
 }
@@ -14,7 +15,7 @@ export const metadata = {
 
 }
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={golosText.className}>
       <meta name="viewport" content=""></meta>

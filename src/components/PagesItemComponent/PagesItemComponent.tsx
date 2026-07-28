@@ -1,10 +1,9 @@
 "use client"
 import { ChevronRightIcon } from "lucide-react"
 import styles from "./styles.module.scss"
-import { redirect } from "next/navigation"
 import Link from "next/link"
 
-function PagesItemComponent({ icon, name, text, active, link, ...props }) {
+function PagesItemComponent({ icon, name, text, active, link, ...props }: { icon: any, name: string, text: string, active: boolean, link?: string }) {
 
     return (
         <li className={styles.item}>

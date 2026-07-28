@@ -1,8 +1,8 @@
 export interface Event {
-    id: string
+    id: string | number
     date: string
     name: string
     location: string
     category: string
-    time: string
+    time: string | null
 }
