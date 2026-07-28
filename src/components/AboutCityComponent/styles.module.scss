@@ -79,11 +79,13 @@
 
     }
 
-    &__label {}
+    &__label {
+        font-size: 14px;
+    }
 
     &__info {
         color: #737985;
-        font-size: 14px;
+        font-size: 12px;
     }
 
     &__img {
