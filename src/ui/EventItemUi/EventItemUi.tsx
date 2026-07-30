@@ -24,6 +24,7 @@ function EventItemUi({ event }: EventItemUiProps) {
         "festival": "Фестиваль",
         "education": "Образование"
     }
+
     function formatDate(dateString: string) {
         if (!dateString) {
             return "Дата не указана";
@@ -34,7 +35,6 @@ function EventItemUi({ event }: EventItemUiProps) {
 
         const date = new Date(dateString);
 
-        // Проверка, что дата валидная
         if (isNaN(date.getTime())) {
             return "Дата не указана";
         }
@@ -44,26 +44,30 @@ function EventItemUi({ event }: EventItemUiProps) {
 
         return `${day} ${month}`;
     }
+
     function formatDateToISO(dateString: string) {
         if (!dateString) return ''
         const date = new Date(dateString);
 
         const year = date.getFullYear();
-        const month = String(date.getMonth() + 1).padStart(2, '0'); // +1 т.к. месяцы с 0
+        const month = String(date.getMonth() + 1).padStart(2, '0');
         const day = String(date.getDate()).padStart(2, '0');
 
         return `${year}-${month}-${day}`;
     }
 
+    // Фильтры - все проверки должны возвращать null
+    // 1. Проверка на дату
     if (dateStoreDateMs < dateActualMs) {
-        return;
-
+        return null;  // ← Исправлено: return null вместо return
     }
 
+    // 2. Проверка поиска
     if (searchStore && !event.name.toLowerCase().includes(searchStore.toLowerCase())) {
-        return
+        return null;  // ← Исправлено: return null
     }
 
+    // 3. Проверка даты из store
     const isDateMatch = dateStore ? event.date === formatDateToISO(dateStore) : true
     const isCategoryMatch = categoryStore === "all" || categoryStore === category
 
@@ -81,7 +85,6 @@ function EventItemUi({ event }: EventItemUiProps) {
                         <li className={styles.event__category}>{categoriesObj[category]}</li>
                     </ul>
                 </div>
-
             </div>
             <div className={styles.event__footer}>
                 <div className={styles.event__time}>
