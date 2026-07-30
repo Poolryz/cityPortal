@@ -35,7 +35,7 @@ export default function HomePage() {
 			<div className={`${styles.pages} _container`}>
 				<ul className="pages__list">
 					<PagesItemComponent icon={<CalendarDays size={30} />} name={"Календарь событий"} text={"Актуальные мероприятия города: праздники, фестивали, выставки и многое другое."} active={true} link={"/calendar"} />
-					<PagesItemComponent icon={<Landmark size={30} />} name={"Достопремичательности"} text={"История, культура и уникальные места Лысьвы, которые стоит увидеть"} active={false} link={""} />
+					<PagesItemComponent icon={<Landmark size={30} />} name={"Достопримечательности"} text={"История, культура и уникальные места Лысьвы, которые стоит увидеть"} active={false} link={""} />
 					<PagesItemComponent icon={<Store size={30} />} name={"Бизнес"} text={"Каталог компаний и услуг лысьвы"} active={false} link={""} />
 					<PagesItemComponent icon={<Utensils size={30} />} name={"Где поесть"} text={"Рестораны, кафе и бары на любой вкус и повод"} active={false} link={""} />
 					<PagesItemComponent icon={<Bed size={30} />} name={"Где остановиться"} text={"Гостиницы, отели и уютные апартаменты для гостей нашего города"} active={false} link={""} />
