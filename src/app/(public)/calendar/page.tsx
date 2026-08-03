@@ -15,7 +15,7 @@ export const generateMetadata = () => {
 
 export default function CalendarPage() {
     return (
-        <>
+        <div className="flex-1">
             <div className={styles.titlePanel}>
                 <h1 className={styles.titlePanel__title}>Календарь мероприятий</h1>
                 <SearchPanelUi />
@@ -27,6 +27,6 @@ export default function CalendarPage() {
                 </h3>
                 <EventsListUi />
             </div>
-        </>
+        </div>
     )
 }
