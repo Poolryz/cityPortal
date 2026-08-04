@@ -1,0 +1,20 @@
+.item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: #8c8c8c;
+
+    &_active {
+        background-color: #e6f4ff;
+        color: #1677ff;
+
+    }
+}
+
+.link {
+    font-size: 18px;
+    font-weight: 600;
+}

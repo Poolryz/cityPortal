@@ -3,6 +3,7 @@ import styles from "./styles.module.scss"
 import FilterUi from "@/ui/FilterUi/FilterUi"
 import SearchPanelUi from "@/ui/SearchPanelUi/SearchPanelUi"
 import EventsListUi from "@/ui/EventsListUi/EventsListUi"
+import TitlePageComponent from "@/components/TitlePageComponent/TitlePageComponent"
 
 export const generateMetadata = () => {
     return {
@@ -14,19 +15,15 @@ export const generateMetadata = () => {
 
 
 export default function CalendarPage() {
-    return (
-        <div className="flex-1">
-            <div className={styles.titlePanel}>
-                <h1 className={styles.titlePanel__title}>Календарь мероприятий</h1>
-                <SearchPanelUi />
-            </div>
-            <FilterUi />
-            <div className={styles.upcomingEvents}>
-                <h3 className={styles.upcomingEvents__title}>
-                    Предстоящие события
-                </h3>
-                <EventsListUi />
-            </div>
+    return (<>
+        <TitlePageComponent search={true} />
+        <FilterUi />
+        <div className={styles.upcomingEvents}>
+            <h3 className={styles.upcomingEvents__title}>
+                Предстоящие события
+            </h3>
+            <EventsListUi />
         </div>
+    </>
     )
 }

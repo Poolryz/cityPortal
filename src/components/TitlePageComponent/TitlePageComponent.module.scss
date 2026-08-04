@@ -1,0 +1,12 @@
+.titlePanel {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0;
+    justify-content: space-between;
+    align-items: center;
+
+    &__title {
+        font-size: 1.7rem;
+
+    }
+}
